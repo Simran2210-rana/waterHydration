@@ -1,0 +1,239 @@
+html,
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero {
+  min-height: 100vh;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.5) 50%
+    ),
+    url("../assets/background.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* logo section */
+#logo {
+  display: flex;
+  padding-left: 10%;
+  padding-top: 3em;
+  height: 5em;
+}
+
+#logo_hydration {
+  font-size: 3rem;
+  color: #ff7200;
+  margin: 0%;
+}
+
+
+/* main part */
+#main{
+  display: flex;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+
+/* user info */
+#user_info{
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  background-color: rgba(228, 224, 220, 0.664);
+  border-radius: 14px;
+}
+.info_heading{
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 0.6em;
+}
+
+#gender_container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+}
+
+input[type="radio"]{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.gender_label{
+  padding: 0.4em 1.3em;
+  border: 2px solid #ff7200 ;
+  border-radius: 5px;
+  color: #ff7200;
+  position: relative;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.gender_label::before{
+  content: "";
+  height: 1.4rem;
+  width: 1.4rem;
+  border: 3px solid #ff7200 ;
+  border-radius: 50%;
+  margin-right: 0.6em;
+}
+
+input[type="radio"]:checked + .gender_label{
+  background-color: #ff7200;
+  color: aliceblue;
+}
+
+input[type="radio"]:checked + .gender_label:before{
+  height: 0.9rem;
+  width: 0.9rem;
+  border: 0.5rem solid white;
+  background-color: #ff7200;
+}
+
+#age_group{
+  display: flex;
+}
+
+.age_label{
+  padding: 10px ;
+  border: 2px solid #ff7200 ;
+  border-radius: 5px;
+  color: #ff7200;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0em 0.2em;
+}
+.age_label>img{
+  filter: invert(39%) sepia(80%) saturate(1143%) hue-rotate(360deg) brightness(110%) contrast(108%);
+}
+
+input[type="radio"]:checked + .age_label{
+  background-color: #ff7200;
+  color: aliceblue;
+}
+
+input[type="radio"]:checked + .age_label>img{
+  filter: brightness(0) invert(1);
+}
+
+#save{
+  /* margin: 0em 0.9em; */
+  margin-top: 1em;
+  background-color: #ff7200;
+  color: aliceblue;
+  padding: 0.6em 1.3em;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* usergoal */
+#user_goal{
+  margin-left: 1em;
+  padding: 1em;
+  background-color: rgba(228, 224, 220, 0.664);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#goal{
+  font-size: 1.5rem;
+}
+
+#goal_inpt{
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  width: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  outline: none;
+}
+
+
+#goal_info img{
+  height: 1em;
+  /* filter: invert(39%) sepia(80%) saturate(1143%) hue-rotate(360deg) brightness(110%) contrast(108%);
+  filter: brightness(0) invert(1); */
+}
+
+#notify{
+  background-color: #ff7200;
+  color: #fff;
+  padding: 0.6em 1.3em;
+  border-radius: 6px;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+#myChart{
+  height: 180px;
+  width: 180px;
+  margin-top: -4px;
+}
+
+#progress{
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+#progress::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(progress);
+  position: absolute;
+  top:16px;
+  left: 15px;
+  width: 150px;
+  height: 150px;  
+  color: #fff;
+  background-color: #ff7200;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+
+#show_chart{
+  display: inline-block;
+  align-self: center;
+  margin-bottom: 2em;
+  padding: 0.6em 1.3em;
+  width: 15em;
+  text-align: center;
+  color: #fff;
+  background-color: #ff7200;
+  border-radius: 8px;
+}
+
+#chart_wrapper{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  background: #ffffffab;
+  position: absolute;
+  top:0;
+}
+
+#chart_container{
+  height: 14em;
+  width: 30em;
+  padding: 2em;
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+}

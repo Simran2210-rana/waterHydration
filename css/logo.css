@@ -1,0 +1,100 @@
+
+#container {
+    width: 3.2rem;
+    height: 4rem;
+    transform: rotate(20deg);
+  }
+  #glass {
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255,1);
+    width: 2.4rem;
+    height: 3.1rem;
+    border-radius: 0rem 0rem 0.3rem 0.3rem;
+    position: relative;
+  }
+  #water {
+    background-image: url("https://priteshgupta.com/demos/fill/waves.png");
+    background-position: top right;
+    position: absolute;
+    bottom: 0px;
+    width: 2.4rem;
+    height: 6em;
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 0rem 0rem 0.3rem 0.3rem;
+    transform: rotatey(180deg);
+  }
+  #glass:hover #water {
+    height: 6.5em;
+    background-position: top left;
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+  }
+  
+  /* wave part */
+  .water {
+    width: 9.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .water h2 {
+    border: none;
+    margin: 0%;
+    position: absolute;
+    font-size: 3rem;
+  }
+  .water h2:nth-child(1) {
+    color: rgb(255, 254, 254);
+  }
+  .water h2:nth-child(2) {
+    color: #2196f3;
+    opacity: 0.9;
+  
+    animation: animate 3s ease-in-out infinite;
+  }
+  .water h2:nth-child(3) {
+    color: #2196f3;
+    opacity: 0.3;
+    animation: animate 6s ease-in-out infinite;
+  }
+  .water h2:nth-child(4) {
+    color: #2196f3;
+    opacity: 0.7;
+    animation: animate 04s ease-in-out infinite;
+  }
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 40%,
+        16% 45%,
+        30% 52%,
+        50% 61%,
+        68% 65%,
+        85% 61%,
+        100% 53%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 59%,
+        18% 67%,
+        36% 70%,
+        51% 66%,
+        66% 56%,
+        82% 49%,
+        100% 45%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
