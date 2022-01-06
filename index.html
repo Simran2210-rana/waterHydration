@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">    
+    <link rel="stylesheet" href="./css/logo.css">    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js" integrity="sha512-ttHne44lbbucAUVjyStgbDTTqvNVQdIGN9gqZeai69i4OXSDNjlBd1tyCVXI/a/DqITpj9gXi84dcyG2vz4jhw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="hero">
+        <div id="logo">
+            <div id="container">
+                <div id="glass">
+                    <div id="water"></div>
+                </div>
+            </div>
+            <div class="water">         
+                <h2>Water</h2> 
+                <h2>Water</h2>
+                <h2>Water</h2>
+                <h2>Water</h2>
+            </div>
+            <h2 id="logo_hydration">Hydration</h2>
+        </div>
+
+        <div id="main">
+
+        <div id="user_info">
+            <span class="info_heading">Select your gender :</span>
+            <div id="gender_container">
+                <input type="radio" name="gender" id="male" checked="checked" value="male">
+                <label class="gender_label" for="male" onclick="changeAgeImgM()">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label class="gender_label" for="female" onclick="changeAgeImgF()"> Female</label>
+            </div>
+            <span class="info_heading">Select your age group :</span>
+            <div id="age_group">
+                <input type="radio" name="age" id="teenager" checked="checked" value="teenager">
+                <label class="age_label" for="teenager">
+                    <img src="./assets/male_teen.png" alt="" id="teenImg">
+                    Teenager
+                </label>
+                <input type="radio" name="age" id="adult" value="adult"  >
+                <label class="age_label" for="adult">
+                    <img  src="./assets/male_adult.png" alt="" id="adultImg">
+                    Adult
+                </label>
+                <input type="radio" name="age" id="senior" value="senior">
+                <label class="age_label" for="senior">
+                    <img src="./assets/male_senior.png" alt="" id="seniorImg">
+                    Senior
+                </label>
+            </div>
+            <span id="save" onclick="saveUserData()">Save</span>
+        </div>
+        <div id="user_goal">
+            <span id="goal">Goal <input id="goal_inpt" value="1.0"  type="text" >L</span>
+            <div id="progress" progress = "0">
+                <canvas id="myChart"></canvas>
+            </div> 
+            <div id="goal_info">
+                which is :
+                <span>
+                    <img src="./assets/bottle.png" alt="">x<b id=bottleC>1</b> or
+                    <img src="./assets/water-glass.png" alt="">x<b id="glassC">2</b>
+                </span>
+            </div>
+            <span id="notify" onclick="takePermissioin()">Notify me!</span>
+        </div>
+    </div>
+    <span id="show_chart" onclick="addData()">Weekly Progress</span>
+    </div>
+    <div id="chart_wrapper">
+        <div id="chart_container">
+            <canvas id="chart_canvas"></canvas>
+        </div>
+    </div>
+<script src="./index.js"></script>
+</body>
+</html>
